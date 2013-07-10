@@ -6,13 +6,13 @@
 //  Copyright (c) 2013 David Wen. All rights reserved.
 //
 
-#import "FirstViewController.h"
+#import "CurrentLocationViewController.h"
 
-@interface FirstViewController ()
+@interface CurrentLocationViewController ()
 
 @end
 
-@implementation FirstViewController
+@implementation CurrentLocationViewController
 
 - (void)viewDidLoad
 {
@@ -24,6 +24,11 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
 @end
