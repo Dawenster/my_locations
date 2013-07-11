@@ -24,6 +24,11 @@
 		2615AC9D178E1A7B00B68DFD /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 2615AC9C178E1A7B00B68DFD /* second.png */; };
 		2615AC9F178E1A7B00B68DFD /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2615AC9E178E1A7B00B68DFD /* second@2x.png */; };
 		26940080178E2E6600F0B902 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2694007F178E2E6600F0B902 /* CoreLocation.framework */; };
+		26940084178F2FE600F0B902 /* LocationDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26940083178F2FE600F0B902 /* LocationDetailsViewController.m */; };
+		26940087178F4E0D00F0B902 /* CategoryPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26940086178F4E0D00F0B902 /* CategoryPickerViewController.m */; };
+		2694008A178F5A1200F0B902 /* HudView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26940089178F5A1200F0B902 /* HudView.m */; };
+		2694008E178F5F6A00F0B902 /* Checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 2694008C178F5F6A00F0B902 /* Checkmark.png */; };
+		2694008F178F5F6A00F0B902 /* Checkmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2694008D178F5F6A00F0B902 /* Checkmark@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +55,14 @@
 		2615AC9C178E1A7B00B68DFD /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		2615AC9E178E1A7B00B68DFD /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		2694007F178E2E6600F0B902 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		26940082178F2FE600F0B902 /* LocationDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationDetailsViewController.h; sourceTree = "<group>"; };
+		26940083178F2FE600F0B902 /* LocationDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationDetailsViewController.m; sourceTree = "<group>"; };
+		26940085178F4E0D00F0B902 /* CategoryPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryPickerViewController.h; sourceTree = "<group>"; };
+		26940086178F4E0D00F0B902 /* CategoryPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryPickerViewController.m; sourceTree = "<group>"; };
+		26940088178F5A1200F0B902 /* HudView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HudView.h; sourceTree = "<group>"; };
+		26940089178F5A1200F0B902 /* HudView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HudView.m; sourceTree = "<group>"; };
+		2694008C178F5F6A00F0B902 /* Checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Checkmark.png; sourceTree = "<group>"; };
+		2694008D178F5F6A00F0B902 /* Checkmark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Checkmark@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +116,13 @@
 				2615AC8F178E1A7B00B68DFD /* MainStoryboard.storyboard */,
 				2615AC92178E1A7B00B68DFD /* CurrentLocationViewController.h */,
 				2615AC93178E1A7B00B68DFD /* CurrentLocationViewController.m */,
+				26940082178F2FE600F0B902 /* LocationDetailsViewController.h */,
+				26940083178F2FE600F0B902 /* LocationDetailsViewController.m */,
+				26940088178F5A1200F0B902 /* HudView.h */,
+				26940089178F5A1200F0B902 /* HudView.m */,
+				2694008B178F5F6A00F0B902 /* Hud Images */,
+				26940085178F4E0D00F0B902 /* CategoryPickerViewController.h */,
+				26940086178F4E0D00F0B902 /* CategoryPickerViewController.m */,
 				2615AC95178E1A7B00B68DFD /* first.png */,
 				2615AC97178E1A7B00B68DFD /* first@2x.png */,
 				2615AC99178E1A7B00B68DFD /* SecondViewController.h */,
@@ -126,6 +146,16 @@
 				2615AC8D178E1A7B00B68DFD /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2694008B178F5F6A00F0B902 /* Hud Images */ = {
+			isa = PBXGroup;
+			children = (
+				2694008C178F5F6A00F0B902 /* Checkmark.png */,
+				2694008D178F5F6A00F0B902 /* Checkmark@2x.png */,
+			);
+			name = "Hud Images";
+			path = "../../../../Dropbox/Personal/eBooks/The iOS Apprentice Bundle/Chapter 3 - MyLocations/Resources/Hud Images";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,6 +218,8 @@
 				2615AC98178E1A7B00B68DFD /* first@2x.png in Resources */,
 				2615AC9D178E1A7B00B68DFD /* second.png in Resources */,
 				2615AC9F178E1A7B00B68DFD /* second@2x.png in Resources */,
+				2694008E178F5F6A00F0B902 /* Checkmark.png in Resources */,
+				2694008F178F5F6A00F0B902 /* Checkmark@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +234,9 @@
 				2615AC88178E1A7B00B68DFD /* AppDelegate.m in Sources */,
 				2615AC94178E1A7B00B68DFD /* CurrentLocationViewController.m in Sources */,
 				2615AC9B178E1A7B00B68DFD /* SecondViewController.m in Sources */,
+				26940084178F2FE600F0B902 /* LocationDetailsViewController.m in Sources */,
+				26940087178F4E0D00F0B902 /* CategoryPickerViewController.m in Sources */,
+				2694008A178F5A1200F0B902 /* HudView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
