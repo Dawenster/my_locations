@@ -23,6 +23,7 @@
 		2615AC9B178E1A7B00B68DFD /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2615AC9A178E1A7B00B68DFD /* SecondViewController.m */; };
 		2615AC9D178E1A7B00B68DFD /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 2615AC9C178E1A7B00B68DFD /* second.png */; };
 		2615AC9F178E1A7B00B68DFD /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2615AC9E178E1A7B00B68DFD /* second@2x.png */; };
+		26940080178E2E6600F0B902 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2694007F178E2E6600F0B902 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		2615AC9A178E1A7B00B68DFD /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		2615AC9C178E1A7B00B68DFD /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		2615AC9E178E1A7B00B68DFD /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		2694007F178E2E6600F0B902 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26940080178E2E6600F0B902 /* CoreLocation.framework in Frameworks */,
 				2615AC78178E1A7B00B68DFD /* UIKit.framework in Frameworks */,
 				2615AC7A178E1A7B00B68DFD /* Foundation.framework in Frameworks */,
 				2615AC7C178E1A7B00B68DFD /* CoreGraphics.framework in Frameworks */,
@@ -67,6 +70,7 @@
 		2615AC6B178E1A7B00B68DFD = {
 			isa = PBXGroup;
 			children = (
+				2694007F178E2E6600F0B902 /* CoreLocation.framework */,
 				2615AC7D178E1A7B00B68DFD /* MyLocations */,
 				2615AC76178E1A7B00B68DFD /* Frameworks */,
 				2615AC75178E1A7B00B68DFD /* Products */,
@@ -322,6 +326,7 @@
 				2615ACA4178E1A7B00B68DFD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
