@@ -10,6 +10,7 @@
 #import "Location.h"
 #import "LocationCell.h"
 #import "LocationDetailsViewController.h"
+#import "UIImage+Resize.h"
 
 @implementation LocationsViewController {
     NSFetchedResultsController *fetchedResultsController;
@@ -26,15 +27,16 @@
         NSEntityDescription *entity = [NSEntityDescription entityForName:@"Location" inManagedObjectContext:self.managedObjectContext];
         [fetchRequest setEntity:entity];
         
-        NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"date" ascending:YES];
-        [fetchRequest setSortDescriptors:[NSArray arrayWithObject:sortDescriptor]];
+        NSSortDescriptor *sortDescriptor1 = [NSSortDescriptor sortDescriptorWithKey:@"category" ascending:YES];
+        NSSortDescriptor *sortDescriptor2 = [NSSortDescriptor sortDescriptorWithKey:@"date" ascending:YES];
+        [fetchRequest setSortDescriptors:[NSArray arrayWithObjects:sortDescriptor1, sortDescriptor2, nil]];
         
         [fetchRequest setFetchBatchSize:20];
         
         fetchedResultsController = [[NSFetchedResultsController alloc]
                                     initWithFetchRequest:fetchRequest
                                     managedObjectContext:self.managedObjectContext
-                                    sectionNameKeyPath:nil
+                                    sectionNameKeyPath:@"category"
                                     cacheName:@"Locations"];
         
         fetchedResultsController.delegate = self;
@@ -61,6 +63,17 @@
     [super viewDidLoad];
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
     [self performFetch];
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return [[self.fetchedResultsController sections] count];
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
+    return [sectionInfo name];
 }
 
 #pragma mark - UITableViewDataSource
@@ -93,6 +106,15 @@
                                           [location.latitude doubleValue],
                                           [location.longitude doubleValue]];
     }
+    
+    UIImage *image = nil;
+    if ([location hasPhoto]) {
+        image = [location photoImage];
+        if (image != nil) {
+            image = [image resizedImageWithBounds:CGSizeMake(66, 66)];
+        }
+    }
+    locationCell.imageView.image = image;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -181,6 +203,7 @@
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         Location *location = [self.fetchedResultsController objectAtIndexPath:indexPath];
+        [location removePhotoFile];
         [self.managedObjectContext deleteObject:location];
         
         NSError *error;

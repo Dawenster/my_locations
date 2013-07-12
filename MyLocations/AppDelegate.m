@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "CurrentLocationViewController.h"
 #import "LocationsViewController.h"
+#import "MapViewController.h"
 
 @interface AppDelegate ()
 
@@ -33,6 +34,9 @@
     navigationController = (UINavigationController *)[[tabBarController viewControllers] objectAtIndex:1];
     LocationsViewController *locationsViewController = (LocationsViewController *)[[navigationController viewControllers] objectAtIndex:0];
     locationsViewController.managedObjectContext = self.managedObjectContext;
+    
+    MapViewController *mapViewController = (MapViewController *)[[tabBarController viewControllers] objectAtIndex:2];
+    mapViewController.managedObjectContext = self.managedObjectContext;
     
     return YES;
 }

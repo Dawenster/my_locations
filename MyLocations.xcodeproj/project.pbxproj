@@ -33,6 +33,9 @@
 		26940097178F737600F0B902 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 26940096178F737600F0B902 /* Location.m */; };
 		2694009A178F8AB300F0B902 /* LocationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26940099178F8AB300F0B902 /* LocationsViewController.m */; };
 		2694009D178F8D8A00F0B902 /* LocationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2694009C178F8D8A00F0B902 /* LocationCell.m */; };
+		2694009F179060FC00F0B902 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2694009E179060FC00F0B902 /* MapKit.framework */; };
+		269400A2179061CD00F0B902 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 269400A1179061CD00F0B902 /* MapViewController.m */; };
+		269400A5179092F300F0B902 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 269400A4179092F300F0B902 /* UIImage+Resize.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +76,11 @@
 		26940099178F8AB300F0B902 /* LocationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationsViewController.m; sourceTree = "<group>"; };
 		2694009B178F8D8A00F0B902 /* LocationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationCell.h; sourceTree = "<group>"; };
 		2694009C178F8D8A00F0B902 /* LocationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationCell.m; sourceTree = "<group>"; };
+		2694009E179060FC00F0B902 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		269400A0179061CD00F0B902 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		269400A1179061CD00F0B902 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		269400A3179092F300F0B902 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
+		269400A4179092F300F0B902 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2694009F179060FC00F0B902 /* MapKit.framework in Frameworks */,
 				26940091178F680500F0B902 /* CoreData.framework in Frameworks */,
 				26940080178E2E6600F0B902 /* CoreLocation.framework in Frameworks */,
 				2615AC78178E1A7B00B68DFD /* UIKit.framework in Frameworks */,
@@ -94,6 +103,7 @@
 		2615AC6B178E1A7B00B68DFD = {
 			isa = PBXGroup;
 			children = (
+				2694009E179060FC00F0B902 /* MapKit.framework */,
 				26940092178F682F00F0B902 /* DataModel.xcdatamodeld */,
 				26940095178F737600F0B902 /* Location.h */,
 				26940096178F737600F0B902 /* Location.m */,
@@ -144,6 +154,10 @@
 				26940099178F8AB300F0B902 /* LocationsViewController.m */,
 				2694009B178F8D8A00F0B902 /* LocationCell.h */,
 				2694009C178F8D8A00F0B902 /* LocationCell.m */,
+				269400A3179092F300F0B902 /* UIImage+Resize.h */,
+				269400A4179092F300F0B902 /* UIImage+Resize.m */,
+				269400A0179061CD00F0B902 /* MapViewController.h */,
+				269400A1179061CD00F0B902 /* MapViewController.m */,
 				2615AC9C178E1A7B00B68DFD /* second.png */,
 				2615AC9E178E1A7B00B68DFD /* second@2x.png */,
 				2615AC7E178E1A7B00B68DFD /* Supporting Files */,
@@ -257,6 +271,8 @@
 				26940097178F737600F0B902 /* Location.m in Sources */,
 				2694009A178F8AB300F0B902 /* LocationsViewController.m in Sources */,
 				2694009D178F8D8A00F0B902 /* LocationCell.m in Sources */,
+				269400A2179061CD00F0B902 /* MapViewController.m in Sources */,
+				269400A5179092F300F0B902 /* UIImage+Resize.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
