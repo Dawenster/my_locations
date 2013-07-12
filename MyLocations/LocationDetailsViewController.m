@@ -9,6 +9,7 @@
 #import "LocationDetailsViewController.h"
 #import "HudView.h"
 #import "Location.h"
+#import "NSMutableString+AddText.h"
 
 @interface LocationDetailsViewController ()
 
@@ -64,10 +65,16 @@
 
 - (NSString *)stringFromPlacemark:(CLPlacemark *)thePlacemark
 {
-    return [NSString stringWithFormat:@"%@ %@, %@, %@ %@, %@",
-            self.placemark.subThoroughfare, self.placemark.thoroughfare,
-            self.placemark.locality, self.placemark.administrativeArea,
-            self.placemark.postalCode, self.placemark.country];
+    NSMutableString *line = [NSMutableString stringWithCapacity:100];
+    
+    [line addText:thePlacemark.subThoroughfare withSeparator:@""];
+    [line addText:thePlacemark.thoroughfare withSeparator:@" "];
+    [line addText:thePlacemark.locality withSeparator:@", "];
+    [line addText:thePlacemark.administrativeArea withSeparator:@", "];
+    [line addText:thePlacemark.postalCode withSeparator:@" "];
+    [line addText:thePlacemark.country withSeparator:@", "];
+    
+    return line;
 }
 
 - (NSString *)formatDate:(NSDate *)theDate
@@ -319,8 +326,7 @@
 
 - (void)showPhotoMenu
 {
-    //if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
-    if (YES) {
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
         actionSheet = [[UIActionSheet alloc]
                        initWithTitle:nil
                        delegate:self
