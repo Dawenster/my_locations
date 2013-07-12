@@ -20,7 +20,6 @@
 		2615AC94178E1A7B00B68DFD /* CurrentLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2615AC93178E1A7B00B68DFD /* CurrentLocationViewController.m */; };
 		2615AC96178E1A7B00B68DFD /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 2615AC95178E1A7B00B68DFD /* first.png */; };
 		2615AC98178E1A7B00B68DFD /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2615AC97178E1A7B00B68DFD /* first@2x.png */; };
-		2615AC9B178E1A7B00B68DFD /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2615AC9A178E1A7B00B68DFD /* SecondViewController.m */; };
 		2615AC9D178E1A7B00B68DFD /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 2615AC9C178E1A7B00B68DFD /* second.png */; };
 		2615AC9F178E1A7B00B68DFD /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2615AC9E178E1A7B00B68DFD /* second@2x.png */; };
 		26940080178E2E6600F0B902 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2694007F178E2E6600F0B902 /* CoreLocation.framework */; };
@@ -32,6 +31,8 @@
 		26940091178F680500F0B902 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26940090178F680500F0B902 /* CoreData.framework */; };
 		26940094178F682F00F0B902 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 26940092178F682F00F0B902 /* DataModel.xcdatamodeld */; };
 		26940097178F737600F0B902 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 26940096178F737600F0B902 /* Location.m */; };
+		2694009A178F8AB300F0B902 /* LocationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26940099178F8AB300F0B902 /* LocationsViewController.m */; };
+		2694009D178F8D8A00F0B902 /* LocationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2694009C178F8D8A00F0B902 /* LocationCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,8 +54,6 @@
 		2615AC93178E1A7B00B68DFD /* CurrentLocationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CurrentLocationViewController.m; sourceTree = "<group>"; };
 		2615AC95178E1A7B00B68DFD /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		2615AC97178E1A7B00B68DFD /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		2615AC99178E1A7B00B68DFD /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		2615AC9A178E1A7B00B68DFD /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		2615AC9C178E1A7B00B68DFD /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		2615AC9E178E1A7B00B68DFD /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		2694007F178E2E6600F0B902 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -70,6 +69,10 @@
 		26940093178F682F00F0B902 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		26940095178F737600F0B902 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
 		26940096178F737600F0B902 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
+		26940098178F8AB300F0B902 /* LocationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationsViewController.h; sourceTree = "<group>"; };
+		26940099178F8AB300F0B902 /* LocationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationsViewController.m; sourceTree = "<group>"; };
+		2694009B178F8D8A00F0B902 /* LocationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationCell.h; sourceTree = "<group>"; };
+		2694009C178F8D8A00F0B902 /* LocationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,8 +140,10 @@
 				26940086178F4E0D00F0B902 /* CategoryPickerViewController.m */,
 				2615AC95178E1A7B00B68DFD /* first.png */,
 				2615AC97178E1A7B00B68DFD /* first@2x.png */,
-				2615AC99178E1A7B00B68DFD /* SecondViewController.h */,
-				2615AC9A178E1A7B00B68DFD /* SecondViewController.m */,
+				26940098178F8AB300F0B902 /* LocationsViewController.h */,
+				26940099178F8AB300F0B902 /* LocationsViewController.m */,
+				2694009B178F8D8A00F0B902 /* LocationCell.h */,
+				2694009C178F8D8A00F0B902 /* LocationCell.m */,
 				2615AC9C178E1A7B00B68DFD /* second.png */,
 				2615AC9E178E1A7B00B68DFD /* second@2x.png */,
 				2615AC7E178E1A7B00B68DFD /* Supporting Files */,
@@ -245,12 +250,13 @@
 				2615AC84178E1A7B00B68DFD /* main.m in Sources */,
 				2615AC88178E1A7B00B68DFD /* AppDelegate.m in Sources */,
 				2615AC94178E1A7B00B68DFD /* CurrentLocationViewController.m in Sources */,
-				2615AC9B178E1A7B00B68DFD /* SecondViewController.m in Sources */,
 				26940084178F2FE600F0B902 /* LocationDetailsViewController.m in Sources */,
 				26940087178F4E0D00F0B902 /* CategoryPickerViewController.m in Sources */,
 				2694008A178F5A1200F0B902 /* HudView.m in Sources */,
 				26940094178F682F00F0B902 /* DataModel.xcdatamodeld in Sources */,
 				26940097178F737600F0B902 /* Location.m in Sources */,
+				2694009A178F8AB300F0B902 /* LocationsViewController.m in Sources */,
+				2694009D178F8D8A00F0B902 /* LocationCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

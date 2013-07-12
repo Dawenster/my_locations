@@ -20,6 +20,8 @@
     NSDate *date;
 }
 
+@synthesize locationToEdit;
+
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
     if ((self = [super initWithCoder:aDecoder])) {
@@ -54,11 +56,17 @@
 {
     [super viewDidLoad];
     
+    if (self.locationToEdit != nil) {
+        self.title = @"Edit Location";
+        
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]
+                                                  initWithBarButtonSystemItem:UIBarButtonSystemItemDone
+                                                  target:self
+                                                  action:@selector(done:)];
+    }
+    
     self.descriptionTextView.text = descriptionText;
     self.categoryLabel.text = categoryName;
-    
-    self.descriptionTextView.text = @"";
-    self.categoryLabel.text = @"";
     
     self.latitudeLabel.text = [NSString stringWithFormat:@"%.8f", self.coordinate.latitude];
     self.longitudeLabel.text = [NSString stringWithFormat:@"%.8f", self.coordinate.longitude];
@@ -104,9 +112,15 @@
 - (IBAction)done:(id)sender
 {
     HudView *hudView = [HudView hudInView:self.navigationController.view animated:YES];
-    hudView.text = @"Tagged";
     
-    Location *location = [NSEntityDescription insertNewObjectForEntityForName:@"Location" inManagedObjectContext:self.managedObjectContext];
+    Location *location = nil;
+    if (self.locationToEdit != nil) {
+        hudView.text = @"Updated";
+        location = self.locationToEdit;
+    } else {
+        hudView.text = @"Tagged";
+        location = [NSEntityDescription insertNewObjectForEntityForName:@"Location" inManagedObjectContext:self.managedObjectContext];
+    }
     
     location.locationDescription = descriptionText;
     location.category = categoryName;
@@ -127,6 +141,19 @@
 - (IBAction)cancel:(id)sender
 {
     [self closeScreen];
+}
+
+- (void)setLocationToEdit:(Location *)newLocationToEdit
+{
+    if (locationToEdit != newLocationToEdit) {
+        locationToEdit = newLocationToEdit;
+        
+        descriptionText = locationToEdit.locationDescription;
+        categoryName = locationToEdit.category;
+        self.coordinate = CLLocationCoordinate2DMake([locationToEdit.latitude doubleValue], [locationToEdit.longitude doubleValue]);
+        self.placemark = locationToEdit.placemark;
+        date = locationToEdit.date;
+    }
 }
 
 #pragma mark - UITableViewDelegate
