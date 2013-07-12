@@ -29,6 +29,9 @@
 		2694008A178F5A1200F0B902 /* HudView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26940089178F5A1200F0B902 /* HudView.m */; };
 		2694008E178F5F6A00F0B902 /* Checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 2694008C178F5F6A00F0B902 /* Checkmark.png */; };
 		2694008F178F5F6A00F0B902 /* Checkmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2694008D178F5F6A00F0B902 /* Checkmark@2x.png */; };
+		26940091178F680500F0B902 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26940090178F680500F0B902 /* CoreData.framework */; };
+		26940094178F682F00F0B902 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 26940092178F682F00F0B902 /* DataModel.xcdatamodeld */; };
+		26940097178F737600F0B902 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 26940096178F737600F0B902 /* Location.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +66,10 @@
 		26940089178F5A1200F0B902 /* HudView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HudView.m; sourceTree = "<group>"; };
 		2694008C178F5F6A00F0B902 /* Checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Checkmark.png; sourceTree = "<group>"; };
 		2694008D178F5F6A00F0B902 /* Checkmark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Checkmark@2x.png"; sourceTree = "<group>"; };
+		26940090178F680500F0B902 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		26940093178F682F00F0B902 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		26940095178F737600F0B902 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
+		26940096178F737600F0B902 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26940091178F680500F0B902 /* CoreData.framework in Frameworks */,
 				26940080178E2E6600F0B902 /* CoreLocation.framework in Frameworks */,
 				2615AC78178E1A7B00B68DFD /* UIKit.framework in Frameworks */,
 				2615AC7A178E1A7B00B68DFD /* Foundation.framework in Frameworks */,
@@ -83,6 +91,10 @@
 		2615AC6B178E1A7B00B68DFD = {
 			isa = PBXGroup;
 			children = (
+				26940092178F682F00F0B902 /* DataModel.xcdatamodeld */,
+				26940095178F737600F0B902 /* Location.h */,
+				26940096178F737600F0B902 /* Location.m */,
+				26940090178F680500F0B902 /* CoreData.framework */,
 				2694007F178E2E6600F0B902 /* CoreLocation.framework */,
 				2615AC7D178E1A7B00B68DFD /* MyLocations */,
 				2615AC76178E1A7B00B68DFD /* Frameworks */,
@@ -237,6 +249,8 @@
 				26940084178F2FE600F0B902 /* LocationDetailsViewController.m in Sources */,
 				26940087178F4E0D00F0B902 /* CategoryPickerViewController.m in Sources */,
 				2694008A178F5A1200F0B902 /* HudView.m in Sources */,
+				26940094178F682F00F0B902 /* DataModel.xcdatamodeld in Sources */,
+				26940097178F737600F0B902 /* Location.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,6 +378,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		26940092178F682F00F0B902 /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				26940093178F682F00F0B902 /* DataModel.xcdatamodel */,
+			);
+			currentVersion = 26940093178F682F00F0B902 /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 2615AC6C178E1A7B00B68DFD /* Project object */;
 }
